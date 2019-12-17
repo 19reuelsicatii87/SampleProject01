@@ -32,9 +32,16 @@
 				         <input type="checkbox" name="skills" value="C#" />C# 
 				         <br /> <br />
 				Country: <select>
+							<?php 
+							$Country="Philippines";
+							$Countries=array(Japan, Singapore);
+							?>
         					<option selected="selected" value="USA">USA</option>
         					<option value="India">India</option>
         					<option value="UK">UK</option>
+        					<option value=<?php echo $Country?>><?php echo $Country?></option>
+        					<option value=<?php echo $Countries[0]?>><?php echo $Countries[0]?></option>
+        					<option value=<?php echo $Countries[1]?>><?php echo $Countries[1]?></option>
 						</select> 
 						<br /> <br /> 
 				Summary : <br />
