@@ -1,5 +1,7 @@
 <?php
 
+// Convertiong Other TYPES ==> BOOLEAN
+// ====================================
 $var_name1=678;
 $var_name2="a678";
 $var_name3="678";
