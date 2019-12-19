@@ -23,16 +23,24 @@
     				<div class="col-sm-12">
     					<h1 title="topic1">Headline 1</h1>
     				</div>
+    			</div>
 				<div class="row">
-    				<div class="col-sm-12">
-    				<?php 
-						$uri="/SampleProject01/php/SamplePage02.php";
-                    ?>
-    				<a href=<?php echo $uri  ?>>SamplePage02</a>
+    				<div class="col-sm-2"></div>
+    				<div class="col-sm-4">
+						<?php 
+						$pageName="SamplePage02";
+    				    $uri="/SampleProject01/php/SamplePage02.php";
+						
+						// Using ECHO to create an HTML tag						
+						echo '<a href="/SampleProject01/php/SamplePage02.php">'.$pageName.'</a>';					
+                        ?>
     				</div>
-    			</div>
-    			</div>
-    			<div class="row">
+    				<div class="col-sm-4">
+						<a href=<?php echo $uri  ?>><?php echo $pageName  ?></a>
+    				</div>
+    				<div class="col-sm-2"></div>
+        		</div>
+      			<div class="row">
 					<div class="col-sm-5">
 						First Name : <input type="text" value="John" /> 
 					</div>
@@ -84,6 +92,9 @@
         					   
         					   // Single qoutes treats the variable as text
         					   echo 'Hello $Country '."\n"; 
+        					   
+        					   // Displaying special characters using "\"
+        					   echo "\*\*\*\*Hello World\*\*\*\* \n";
         					?>
         					I am a Senior Dot Net Developer with 10 years experience
 	    					</textarea>
