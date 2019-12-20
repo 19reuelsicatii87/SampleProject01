@@ -64,17 +64,23 @@ var_dump($array5);
 // ================================================
 echo "<br>".'=================================='."<br>";
 $array6 = array(
-    "foo" => "bar",
-    42    => 24,
+    "foo"   => "bar",
+    42      => 24,
     "multi" => array(
-        "dimensional" => array(
-            "array" => "foo"
-        )
-    )
+                "dimensional" => array(
+                    "Value01" => "fooOne",
+                    "Value02" => "fooTwo",
+                )
+                ),
+    "multitwo" => array(
+                 "multitwodimensional"  => "multitwofooooooooo"
+                )
 );
 
 var_dump($array6["foo"]);
 var_dump($array6[42]);
-var_dump($array6["multi"]["dimensional"]["array"]);
+var_dump($array6["multi"]["dimensional"]["Value01"]);
+echo "<br>".'=================================='."<br>";
+var_dump($array6);
 
 ?>
