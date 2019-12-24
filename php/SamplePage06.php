@@ -16,17 +16,20 @@
 <script src="/SampleProject01/js/SamplePage01.js"></script>
 </head>
 <body>
-	<div class="container">
-	Welcome <?php echo $_POST["exampleInputEmail1"]; ?><br>
-	Your email address password is: <?php echo $_POST["exampleInputPassword1"]; ?><br>
-	Your email address password is: <?php echo $_POST["exampleCheck1"]; ?>
- 
-	</div>
+	<?php if ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+        	    <div class="container">
+        	       <h3>Post Form</h3>
+        	       Welcome <?php echo $_POST["exampleInputEmail1"]."<br>"; ?>
+        	       Your Email address password is: <?php echo $_POST["exampleInputPassword1"]."<br>"; ?>
+                   Your CheckBox value is: <?php echo $_POST["exampleCheck1"]; ?>
+                   </div>        
+	<?php else : ?>
+        	    <div class="container">
+        	    <h3>Get Form</h3>
+        	    Welcome <?php echo $_GET["exampleInputEmail1"]."<br>"; ?>
+        	    Your Email address password is: <?php echo $_GET["exampleInputPassword1"]."<br>"; ?>
+        	    Your CheckBox value is: <?php echo $_GET["exampleCheck1"]; ?>
+        	    </div>
+     <?php endif; ?>
 </body>
 </html>
-
-
-
-
-<?php
-?>
