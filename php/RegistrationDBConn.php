@@ -25,7 +25,8 @@ else{
     $stmt = $conn->prepare("insert into registration(username, email, password_one, password_two) values (?,?,?,?)");
     $stmt->bind_param("ssss", $username, $email,$password,$confirmpassword);
     $stmt->execute();
-    echo "Registration Successfully";
+    //echo "Registration Successfully";
+    header("Location: /SampleProject01/html/about.html");
     $stmt->close();
     $conn->close();
 }
