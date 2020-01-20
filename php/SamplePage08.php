@@ -23,5 +23,6 @@
         	       <h3>SecondImage</h3>
                 </div>     
      <?php endif; ?>
+     <?php echo date('Y-m-d H:i:s'); ?>
 </body>
 </html>

@@ -30,3 +30,30 @@ $(function() {
 	});
 
 });
+
+
+//Attribute Contains Word Selector [name~=”value”]
+// ======================================================
+$(document).ready(function() {
+	//$("input[name~='new']").val("This is all new");
+	//$("input[name~='man']").val( "mr. man is in it!" );
+	$("input").val( "mr. man is in it!" );
+});
+
+$(document).ready(function() {
+	$("input").each(function(){
+		$(this).css("color", "red");
+	});
+});
+
+$(document).ready(function(){
+	$("#add-order").click(function(){
+		$.each([ 52, 97 ], function( index, value ) {
+			  alert( index + ": " + value );
+			});		
+	});
+});
+
+
+
+
